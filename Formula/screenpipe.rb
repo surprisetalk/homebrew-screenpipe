@@ -22,7 +22,7 @@ class Screenpipe < Formula
   end
 
   depends_on "ffmpeg"
-  depends_on "bun" => :recommended
+  depends_on "oven-sh/bun/bun" => :recommended
   
   depends_on macos: :sonoma if OS.mac?
   
