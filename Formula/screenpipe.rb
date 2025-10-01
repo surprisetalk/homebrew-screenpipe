@@ -31,8 +31,12 @@ class Screenpipe < Formula
   end
 
   def install
+    # Debug: print current directory and contents
+    ohai "Current directory:", Dir.pwd
+    ohai "Directory contents:", Dir.glob("**/*").join("\n")
+
     bin.install "bin/screenpipe"
-    
+
     if Dir.exist?("screenpipe-vision")
       if OS.mac?
         lib.install Dir["screenpipe-vision/lib/*.dylib"]
